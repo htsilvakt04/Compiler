@@ -1,6 +1,8 @@
 #ifndef clox_vm_h
 #define clox_vm_h
 
+#include <stdint.h>
+
 #include "value.h"
 #include "chunk.h"
 #define STACK_MAX 256
@@ -25,6 +27,5 @@ void freeVM();
 InterpretResult interpret(const char *source);
 
 void push(Value value);
-
 Value pop();
 #endif
