@@ -5,6 +5,7 @@
 
 #include "value.h"
 #include "chunk.h"
+#include "table.h"
 #define STACK_MAX 256
 
 typedef struct {
@@ -13,6 +14,7 @@ typedef struct {
     Value *stackTop;
     Value stack[STACK_MAX];
     Obj *objects;
+    Table strings;
 } VM;
 
 typedef enum {
