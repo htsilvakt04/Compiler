@@ -15,6 +15,7 @@ typedef struct {
     Value stack[STACK_MAX];
     Obj *objects;
     Table strings;
+    Table globals;
 } VM;
 
 typedef enum {

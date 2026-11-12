@@ -96,6 +96,8 @@ static Token string() {
         advance();
     }
     if (isAtEnd()) return errorToken("Unterminated string.");
+    // The closing quote.
+    advance();
     return makeToken(TOKEN_STRING);
 }
 
